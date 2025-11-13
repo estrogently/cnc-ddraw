@@ -116,8 +116,8 @@ runs:
  - name:  Build Release
    id:    build-release
    run:   |
-          if false; then 
-          #if [[ "${{ inputs.release }}" == "true" ]]; then
+          #if false; then 
+          if [[ "${{ inputs.release }}" == "true" ]]; then
              echo ::group::Build Release
 
              #
