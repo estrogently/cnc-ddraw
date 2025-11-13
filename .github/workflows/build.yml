@@ -42,11 +42,11 @@ jobs:
     with:
      release: true
 
-  - name: ReleaseXP build
-    id: build-releasexp
-    uses: ./
-    with:
-     releasexp: true
+  #- name: ReleaseXP build
+  #  id: build-releasexp
+  #  uses: ./
+  #  with:
+  #   releasexp: true
 
   - name: Debug build
     id: build-debug
@@ -54,17 +54,17 @@ jobs:
     with:
      debug: true
 
-  - name: DebugLogXP build
-    id: build-debuglogxp
-    uses: ./
-    with:
-     debuglogxp: true
+  #- name: DebugLogXP build
+  #  id: build-debuglogxp
+  #  uses: ./
+  #  with:
+  #   debuglogxp: true
 
-  - name: DebugLogMiniXP build
-    id: build-debuglogminixp
-    uses: ./
-    with:
-     debuglogminixp: true
+  #- name: DebugLogMiniXP build
+  #  id: build-debuglogminixp
+  #  uses: ./
+  #  with:
+  #   debuglogminixp: true
 
   - name:  Prepare artifact
     run:   |
@@ -120,11 +120,11 @@ jobs:
      name: cnc-ddraw-release
      path: cnc-ddraw-release
 
-  - name: Upload artifacts cnc-ddraw-releasexp
-    uses: actions/upload-artifact@v4
-    with:
-     name: cnc-ddraw-releasexp
-     path: cnc-ddraw-releasexp
+  #- name: Upload artifacts cnc-ddraw-releasexp
+  #  uses: actions/upload-artifact@v4
+  #  with:
+  #   name: cnc-ddraw-releasexp
+  #   path: cnc-ddraw-releasexp
 
   - name: Upload artifacts cnc-ddraw-debug
     uses: actions/upload-artifact@v4
@@ -132,17 +132,17 @@ jobs:
      name: cnc-ddraw-debug
      path: cnc-ddraw-debug
 
-  - name: Upload artifacts cnc-ddraw-debuglogxp
-    uses: actions/upload-artifact@v4
-    with:
-     name: cnc-ddraw-debuglogxp
-     path: cnc-ddraw-debuglogxp
+  #- name: Upload artifacts cnc-ddraw-debuglogxp
+  #  uses: actions/upload-artifact@v4
+  #  with:
+  #   name: cnc-ddraw-debuglogxp
+  #   path: cnc-ddraw-debuglogxp
 
-  - name: Upload artifacts cnc-ddraw-debuglogminixp
-    uses: actions/upload-artifact@v4
-    with:
-     name: cnc-ddraw-debuglogminixp
-     path: cnc-ddraw-debuglogminixp
+  #- name: Upload artifacts cnc-ddraw-debuglogminixp
+  #  uses: actions/upload-artifact@v4
+  #  with:
+  #   name: cnc-ddraw-debuglogminixp
+  #   path: cnc-ddraw-debuglogminixp
      
   - name: Release experimental
     uses: softprops/action-gh-release@v1
